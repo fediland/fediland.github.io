@@ -6,4 +6,5 @@ var instances = {
     'Expired Mentality': 'https://expired.mentality.rip',
     'Клуб "Свобода"': 'https://soc.phreedom.club',
     'zHub.link': 'https://zhub.link',
+    'Дорогу осилит идущий': 'https://aspirant.de',
 };
