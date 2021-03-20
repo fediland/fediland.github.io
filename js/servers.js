@@ -5,4 +5,5 @@ var instances = {
     'mastodon.ml': 'https://mastodon.ml',
     'Expired Mentality': 'https://expired.mentality.rip',
     'Клуб "Свобода"': 'https://soc.phreedom.club',
+    'zHub.link': 'https://zhub.link'
 };
