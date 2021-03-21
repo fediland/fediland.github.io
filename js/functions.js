@@ -1,14 +1,12 @@
 /**
- * Returns random key from the object.
+ * Returns random item from given array.
  * 
- * @param {object} obj 
- * @returns {string}
+ * @param {array} array 
+ * @returns {object}
  */
-function getRandomKey(obj) {
-    let keys = Object.keys(obj);
-    
-    return keys[ keys.length * Math.random() << 0 ];
-};
+function getRandomItem(array) {
+    return array[array.length * Math.random() << 0];
+}
 
 /**
  * Randomly sorts an array.
