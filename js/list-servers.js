@@ -1,19 +1,33 @@
 // Should be included using 'defer' after servers.js and functions.js
 
-let listGroup = document.getElementById('server-list');
+let tableBody = document.getElementById('table-servers-body');
 
-let shuffledServerNames = shuffleArray(Object.keys(instances));
-console.log('shuffled: ', shuffledServerNames);
+let shuffledServers = shuffleArray(instances);
+console.log('shuffled: ', shuffledServers);
 
-for (serverName of shuffledServerNames) {
-    let url = instances[serverName];
+for (server of shuffledServers) {
+    let platform = platforms[server.platform];
+    let regMode = registrationModes[server.registration];
 
-    // Creating list item
-    let item = document.createElement('a');
-    item.setAttribute('class', 'list-group-item');
-    item.setAttribute('href', url);
-    item.innerText = serverName;
+    let tr = document.createElement('tr');
 
-    listGroup.appendChild(item);
+    let tdName = document.createElement('td');
+    let tdPlatform = document.createElement('td');
+    let tdRegistration = document.createElement('td');
+    tr.appendChild(tdName);
+    tr.appendChild(tdPlatform);
+    tr.appendChild(tdRegistration);
+
+    serverLink = document.createElement('a');
+    serverLink.setAttribute('href', server.url);
+    serverLink.innerText = server.name;
+    tdName.appendChild(serverLink);
+    platformIcon = document.createElement('img');
+    platformIcon.setAttribute('src', platform.icon);
+    tdPlatform.appendChild(platformIcon);
+    tdPlatform.appendChild(document.createTextNode(' ' + platform.name));
+    tdRegistration.innerText = regMode.name;
+
+    // Adding to table
+    tableBody.appendChild(tr);
 }
-
