@@ -19,4 +19,4 @@
 - [ ] HTTPS
   - [ ] Включён и [корректно настроен](https://ssl-config.mozilla.org)
   - [ ] Включён [HSTS](https://ru.wikipedia.org/wiki/HSTS)
-  - [ ] Сертификаты перевыпускаются автоматически и вы это проверяли ([Certbot](https://certbot.eff.org), [acme.sh](https://github.com/acmesh-official/acme.sh), [lego](https://github.com/go-acme/lego), etc)
+  - [ ] Сертификаты перевыпускаются автоматически и вы это проверяли ([Certbot](https://certbot.eff.org), [acme.sh](https://github.com/acmesh-official/acme.sh), [caddy](https://caddyserver.com), [traefik](https://traefik.io), [lego](https://github.com/go-acme/lego), etc)
