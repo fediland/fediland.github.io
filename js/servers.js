@@ -6,7 +6,6 @@ var instances = [
     {name: 'Expired Mentality', url: 'https://expired.mentality.rip', platform: 'pleroma', registration: 'open'},
     {name: 'Клуб "Свобода"', url: 'https://soc.phreedom.club', platform: 'pleroma', registration: 'open'},
     {name: 'zHub.link', url: 'https://zhub.link', platform: 'mastodon', registration: 'open'},
-    {name: 'Дорогу осилит идущий', url: 'https://aspirant.de', platform: 'mastodon', registration: 'open'},
 ];
 
 var platforms = {
