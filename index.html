@@ -1,143 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Into the Fediverse!</title>
-
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="Alexey Skobkin">
-
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-	<!-- Instances list -->
-	<script type="text/javascript" src="js/servers.js" defer></script>
-	<!-- Common functions -->
-    <script type="text/javascript" src="js/functions.js" defer></script>
-	<!-- Choosing random instance -->
-	<script type="text/javascript" src="js/random-server.js" defer></script>
-  </head>
-  <body>
-
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
-				 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1">
-					<span class="navbar-toggler-icon"></span>
-				</button> 
-				
-				<a class="navbar-brand" href="index.html">Fediland</a>
-
-				<div class="collapse navbar-collapse" id="navbar-collapse-1">
-					<ul class="navbar-nav">
-						<li class="nav-item active">
-							 <a class="nav-link" href="index.html">Главная<span class="sr-only"></span></a>
-						</li>
-						<li class="nav-item">
-							 <a class="nav-link" href="servers.html"><i class=""></i> Серверы<span class="sr-only"></span></a>
-						</li>
-						<li class="nav-item">
-							 <a class="nav-link" href="info.html">Информация<span class="sr-only"></span></a>
-						</li>
-					</ul>
-
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="https://joinmastodon.org">joinmastodon.org<span class="sr-only"></span></a>
-					   </li>
-					   <li class="nav-item">
-							<a class="nav-link" href="https://instances.social">instances.social</a>
-					   </li>
-
-					   <li class="nav-item">
-							<a class="nav-link" href="https://fediverse.party">fediverse.party</a>
-					   </li>
-					   <!--
-					   <li class="nav-item">
-							<a class="nav-link" href="https://www.fediverse.space">fediverse.space</a>
-					   </li>
-					   <li class="nav-item">
-							<a class="nav-link" href="https://fediverse.network">fediverse.network</a>
-					   </li>
-					   -->
-					</ul>
-				</div>
-			</nav>
-
-			<div class="jumbotron">
-				<h2>
-					Добро пожаловать в Федивёрс!
-				</h2>
-				<p>
-					Перейдя по ссылке ниже вы сможете зарегистрироваться на случайном сервере микроблогов в Федивёрсе. 
-				</p>
-				<p>
-					<a class="btn btn-primary btn-large" href="https://lor.sh/" id="reg-link">
-					  Регистрация на lor.sh
-				    </a>
-				</p>
-
-				<table class="table table-sm">
-					<tbody>
-						<tr>
-							<td>Платформа</td>
-							<td id="node-platform">Mastodon</td>
-						</tr>
-						<tr>
-							<td>Регистрация</td>
-							<td id="node-registration">Премодерируемая</td>
-						</tr>
-					</tbody>
-				</table>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-ru" dir="ltr">
+<head>
+	<meta charset="UTF-8"/>
+	<title>О Fediverse, ты — мир!</title>
+	<link rel="icon" type="image/png" href="images/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="css/template.css"/>
+	<meta name="viewport" content="width=device-width"/>
+</head>
+<body>
+<header class="top">
+	<h1 class="top-name"><span class="top-name-p1">FEDI</span><span class="top-name-p2">VERSE</span></h1>
+	<div class="top-slogan">Добро пожаловать в Федивёрс!</div>
+</header>
+<main class="main-body">
+	<div class="content">
+		<div class="random-server">
+			<h2>«Меньше слов, больше дела»</h2>
+			<p>Перейдя по ссылке ниже вы сможете зарегистрироваться на случайном сервере микроблогов в Федивёрсе.</p>
+			<p id="random-server-result" class="random-server-result"></p>
+			<p><b>Платформа:</b> <span id="random-server-platform"></span></p>
+			<p><b>Премодерация регистрации:</b> <span id="random-server-premod"></span></p>
+		</div>
+		<h2>Что такое Федивёрс?</h2>
+		<p>Федивёрс — это объединение <a href="https://ru.wikipedia.org/wiki/Децентрализация">децентрализованных</a> социальных сетей, пользователи которых могут общаться друг с другом даже находясь на разных серверах. Представьте, что вы в ленте Twitter видите пост своего друга в Facebook или ВКонтакте и можете написать ему комментарий или поставить лайк не регистрируясь там. Эта идея — один из базовых принципов Федивёрса. </p>
+		<p><a href="https://ru.wikipedia.org/wiki/Fediverse">Подробнее в Википедии…</a></p>
+		<h2>Выбор сервера</h2>
+		<div class="tabs">
+			<div class="tabs-controls" role="tablist"><!--
+				--><button type="button" class="tabs-controls-button" role="tab" id="button-simple" aria-selected="true" aria-controls="info-simple" tabindex="0">Просто</button><!--
+				--><button type="button" class="tabs-controls-button" role="tab" id="button-complex" aria-controls="info-complex" tabindex="-1">Подробно</button><!--
+			--></div>
+			<div class="info-simple tabs-panel" id="info-simple" role="tabpanel" aria-labelledby="button-simple" tabindex="0">
+				<div class="simple-buttons" id="simple-buttons"></div>
+				<div class="simple-title"><a id="simple-title-link" class="simple-title-link"></a></div>
+				<div class="simple-description" id="simple-description"></div>
+				<div class="simple-image" id="simple-image"></div>
+			</div>
+			<div class="info-complex tabs-panel" id="info-complex" role="tabpanel" aria-labelledby="button-complex" hidden="hidden" tabindex="0">
+				<h3>Mastodon</h3>
+				<ul>
+					<li><a href="https://mastodon.ml/" data-platform="Mastodon" data-image="images/mastodon.png" class="data-server-source default">mastodon.ml</a>. <span class="data-server-text">Какой-то русскоязычный инстанс Mastodon. Регистрация свободная. Лимит поста — xxxxx знаков.</span></li>
+					<li><a href="https://zhub.link/" data-platform="Mastodon" data-image="images/mastodon.png" class="data-server-source default">zHub.link</a>. <span class="data-server-text">Другой русскоязычный инстанс Mastodon. Регистрация свободная. Лимит поста — xxxxx знаков.</span></li>
+					<li><a href="https://lor.sh/" data-premod="data-premod" data-platform="Mastodon" data-image="images/mastodon.png" class="data-server-source default">lor.sh</a>. <span class="data-server-text">Крупнейший русскоязычный инстанс Mastodon. Регистрация премодерируемая. Лимит поста — xxxxx знаков.</span></li>
+				</ul>
+				<p><a href="images/mastodon.png" title="Скриншот Mastodon"><img alt="Скриншот Mastodon" width="1170" height="554" src="images/mastodon.png"/></a></p>
+				<h3>Pleroma</h3>
+				<ul>
+					<li><a href="https://soc.phreedom.club/" data-platform="Pleroma" data-image="images/pleroma.png" class="data-server-source default">Клуб «Свобода»</a>. <span class="data-server-text">Инстанс Pleroma. Регистрация свободная. Лимит поста — xxxxx знаков.</span></li>
+					<li><a href="https://expired.mentality.rip/" data-platform="Pleroma" data-image="images/pleroma.png" class="data-server-source default">Expired Mentality</a>. <span class="data-server-text">Инстанс Pleroma, теперь банановый. Регистрация свободная. Лимит поста — xxxxx знаков.</span></li>
+				</ul>
+				<p><a href="images/pleroma.png" title="Скриншот Pleroma"><img alt="Скриншот Pleroma" width="1170" height="554" src="images/pleroma.png"/></a></p>
 			</div>
 		</div>
+		<h2>Узнать больше</h2>
+		<ul>
+			<li><a href="https://tjournal.ru/tech/427610-putevoditel-po-fediverse">«Путеводитель по Fediverse»</a> — статья в TJournal.</li>
+			<li><a href="https://mastodon.ml/@zloygik/105865187342581867">«Рекомендации для новичков, которые только пришли в Мастодон и не знают, что делать дальше (v. 2.0)»</a> — серия постов в блоге Злой Гик.</li>
+			<li><a href="https://habr.com/ru/post/345402/">«Не ходи в Fediverse, там тебя ждут неприятности. — Ну как же туда не ходить? Они же ждут»</a> — статья на Хабре.</li>
+			<li><a href="https://habr.com/ru/users/s4n2a/posts/">«Мифы и легенды древней Fediverse»</a> — статья на Хабре.</li>
+			<li><a href="https://habr.com/ru/post/516144/">«„Дивный новый мир“: что такое Fediverse и как стать его частью»</a> — статья на Хабре.</li>
+			<li><a href="https://novayagazeta.ru/articles/2021/02/11/89165-habzilla-lyubov-moya">«Хабзилла, любовь моя»</a> — статья в Новой Газете.</li>
+		</ul>
 	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<h2>
-				Что такое Федивёрс?
-			</h2>
-			<p>
-				Федивёрс — это объединение <a href="https://ru.wikipedia.org/wiki/Децентрализация">децентрализованных</a> социальных сетей, пользователи которых могут общаться друг с другом даже находясь на разных серверах.
-				Представьте, что вы в ленте Twitter видите пост своего друга в Facebook или ВКонтакте и можете написать ему комментарий или поставить лайк не регистрируясь там. Это один из базовых принципов Федивёрса.
-			</p>
-			<p>
-				<a class="btn btn-dark" href="https://ru.wikipedia.org/wiki/Fediverse">Подробнее в Википедии »</a>
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>
-				Выбор сервера
-			</h2>
-			<p>
-				Нажав на кнопку выше можно зарегистрироваться на случайном рекомендованном сервере. Однако каждый сервер имеет своё сообщество, свои интересы и свои правила поведения.
-				Если вы хотите ответственно подойти к выбору места, где будете вести свой блог — воспользуйтесь списками серверов.
-			</p>
-			<p>
-				<a class="btn btn-dark" href="servers.html">Выбрать самостоятельно »</a>
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>
-				Узнать больше
-			</h2>
-			<p>
-				Хотите почитать про Федивёрс больше? Желаете узнать историю становления, разнообразие альтернатив популярным сервисам и увидеть советы для новичка?
-				Проходите по ссылке ниже, чтобы увидеть подборку ссылок на полезные материалы.
-			</p>
-			<p>
-				<a class="btn btn-dark" href="info.html">Полезные материалы »</a>
-			</p>
-		</div>
-	</div>
-</div>
-
-    <script src="js/jquery/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-  </body>
+</main>
+<footer class="main-footer">
+	<p><a href="https://codeberg.org/tennoseremel/pages/src/branch/main/fediverse-welcome-skb" class="page-source-link">Исходный код страницы</a></p>
+</footer>
+<script src="js/main.js"></script>
+</body>
 </html>
