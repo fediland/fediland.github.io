@@ -286,6 +286,10 @@ h3:not(:first-child) {
 .main-footer p:not(:first-child) {
 	margin-top: 1em;
 }
+.main-footer a {
+	color: var(--link-color);
+	text-decoration: underline;
+}
 .page-source-link {
 	color: var(--link-color);
 	text-decoration: underline;
